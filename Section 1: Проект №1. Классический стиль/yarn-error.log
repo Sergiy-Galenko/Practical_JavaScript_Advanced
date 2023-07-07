@@ -1,0 +1,62 @@
+Arguments: 
+  /Users/sergejgalenko/.nvm/versions/node/v16.18.1/bin/node /Users/sergejgalenko/.nvm/versions/node/v16.18.1/bin/yarn add slink-carusel --save
+
+PATH: 
+  /Users/sergejgalenko/.rvm/gems/ruby-2.7.6/bin:/Users/sergejgalenko/.rvm/gems/ruby-2.7.6@global/bin:/Users/sergejgalenko/.rvm/rubies/ruby-2.7.6/bin:/Users/sergejgalenko/.nvm/versions/node/v16.18.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/sergejgalenko/.rvm/gems/ruby-2.7.6/bin:/Users/sergejgalenko/.rvm/gems/ruby-2.7.6@global/bin:/Users/sergejgalenko/.rvm/rubies/ruby-2.7.6/bin:/Users/sergejgalenko/.nvm/versions/node/v16.18.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Users/sergejgalenko/.rvm/bin:/Users/sergejgalenko/.rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/slink-carusel: Not found
+      at Request.params.callback [as _callback] (/Users/sergejgalenko/.nvm/versions/node/v16.18.1/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/Users/sergejgalenko/.nvm/versions/node/v16.18.1/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/Users/sergejgalenko/.nvm/versions/node/v16.18.1/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/Users/sergejgalenko/.nvm/versions/node/v16.18.1/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1358:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+  	"name": "window",
+  	"version": "1.0.0",
+  	"description": "",
+  	"main": "gulpfile.js",
+  	"scripts": {
+  		"test": "echo \"Error: no test specified\" && exit 1"
+  	},
+  	"author": "",
+  	"license": "ISC",
+  	"browserslist": [
+  		"> 1%",
+  		"not dead"
+  	],
+  	"devDependencies": {
+  		"@babel/core": "^7.22.5",
+  		"@babel/preset-env": "^7.22.5",
+  		"babel": "^6.23.0",
+  		"babel-core": "^6.26.3",
+  		"babel-loader": "^9.1.2",
+  		"browser-sync": "^2.29.3",
+  		"core-js": "^3.31.0",
+  		"gulp": "^4.0.2",
+  		"webpack": "^5.86.0",
+  		"webpack-stream": "^7.0.0"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
