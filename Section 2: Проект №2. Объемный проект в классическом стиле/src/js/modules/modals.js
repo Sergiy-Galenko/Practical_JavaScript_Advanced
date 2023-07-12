@@ -1,9 +1,11 @@
 const modals = () => {
+  let btnPressed = false;
+
   function bindModal(
     triggerSelector,
     modalSelector,
     closeSelector,
-    closeClickOverlay = true
+    destroy = false
   ) {
     const triger = document.querySelectorAll(triggerSelector),
       modal = document.querySelector(modalSelector),
@@ -17,8 +19,15 @@ const modals = () => {
           e.preventDefault();
         }
 
+        btnPressed = true;
+
+        if(destroy){
+          item.remove();
+        }
+
         windows.forEach((item) => {
           item.style.display = "none";
+          item.classList.add('animated','fadeIn');
         });
 
         modal.style.disaply = "block";
@@ -42,7 +51,7 @@ const modals = () => {
         item.style.display = "none";
       });
 
-      if (e.target === modal && closeClickOverlay) {
+      if (e.target === modal) {
         modal.style.disaply = "none";
         document.body.style.overflow = "";
         document.body.style.marginRight = `0px`;
@@ -62,6 +71,8 @@ const modals = () => {
       if (!disaply) {
         document.querySelector(selctor).style.disaply = "block";
         document.body.style.overflow = "hidden";
+        let scroll = calcScroll();
+        document.body.style.marginRight = `${scroll}px`;
       }
     }, time);
   }
@@ -81,9 +92,19 @@ const modals = () => {
     return scrollWidth;
   }
 
+  function openByScroll(selector){
+    window.addEventListener('scroll', () => {
+      if(!btnPressed && (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight )){
+        document.querySelector(selector).click();
+      }
+    });
+  }
+
   bindModal(".button-design", ".popup-design", ".popup-design .popup-close");
   bindModal(".button-consultation",".popup-consultation",".popup-consultation .popup-close" );
-  showModalByTime('.popup-consultation', 5000);
+  bindModal(".fixed-gift", ".popup-gift",".popup-gift .popup-close", true);
+  openByScroll(".fixed-gift",);
+  //showModalByTime('.popup-consultation', 5000);
 };
 
 export default modals;
