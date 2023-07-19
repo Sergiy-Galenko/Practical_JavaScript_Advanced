@@ -1,5 +1,3 @@
-import e from "express";
-
 export default class Slider {
     constructor(page, btns){
         this.page = document.querySelector(page);
